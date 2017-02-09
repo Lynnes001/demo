@@ -1,0 +1,41 @@
+
+
+
+
+<html>		
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">	
+function cli(){
+	document.getElementById("ch").innerHTML="done!";
+}
+
+function cli2(){
+	var ch1=document.getElementById("ch1").innerHTML;
+	document.getElementById("ch2").innerHTML=ch1;
+}
+</script>
+</head>
+
+<body>
+	<h1> 我只是一个测试页</h1>
+
+<input type="button" id="apple" value="hi!" style="border-style: groove;" onclick="cli()">
+<p id="ch">点击按钮后，这里应该会改变！</p>
+
+<hr>
+
+<input type="button" id="apple" value="hi!" style="border-style: groove;" onclick="cli2()">
+
+<p id="ch1">文本1111</p>
+<p id="ch2">点击按钮后，这里应该会改变！</p>
+
+</body>
+
+
+
+
+
+
+
+</html>

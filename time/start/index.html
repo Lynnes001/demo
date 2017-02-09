@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/defaultstart.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+
+	<title>OPEN TimeLab</title>
+
+<style type="text/css">
+body {z-index:0;background-image:url(img/background.jpg);}
+</style>
+</head>
+<body>
+
+<div class="head_left">
+	<p class="linksbtn">Links</p>
+	<p id="searchbtn"></p>
+	<div class="search">
+		<form action="http://www.baidu.com/baidu" target="_blank">
+		<input name=tn type=hidden value=baidu /> 
+		<!-- <a href="http://www.baidu.com/"> -->
+		<!-- <img src="https://icons.duckduckgo.com/ip2/www.baidu.com.ico" alt="Baidu" align="bottom" border="0"></a>	 -->
+		<input type=text name=word size=30 style="background-color:#000000; opacity:.7; border:0; height:25px;border-radius:3px;" /> 
+		<input type="submit" value="百度搜索" style="display:none;" />
+		</form>
+	</div>
+
+	<div class="links">
+		<ol>
+			<li draggable="ture" style="display:list-item">
+				<div class="connect">
+					<a href="www.sina.com"><img src="https://icons.duckduckgo.com/ip2/www.sina.com.ico">"Sina"</a>
+					<span draggable="false" class="control destroy">✕</span>
+				</div>
+			</li>
+		</ol>
+	</div>
+</div>
+
+
+
+<div class="head_right">
+<!-- 	<p>天气</p> -->
+	<div id="weather"></div>
+	<button class="js-geolocation" style="display: none;">Use Your Location</button>
+</div>
+
+<div class="center">
+	<script>setInterval("show_cur_times()",1000);//设置1秒调用一次show_cur_times函数</script>
+	<div id="showtimes"><script language="javascript"></script></div>
+	<div class="welcome"><p id="welcome"></p></div>
+		<!-- <div class="js-geolocation">ABCtest</div> -->
+</div>	
+	
+
+
+<div class="footer_left">
+	<img src="img/user.gif" style="width:30px; height:30px;margin:8px 0 0 0 ;">
+</div>
+
+<div class="timelab">
+<a href="loginindex.php">
+	<img src="img/logocut.gif" style="width:30px; height:30px;margin:10px 0 0 10px;">
+</a>
+</div>
+
+<div class="footer_right">
+	<div class="todo"><p>To Do</p></div>
+	<div class="todolist">
+		<p style="text-align:center;">to do list</p>
+
+		<ol id="list"></ol>
+		<input class="inputctl" type="text" id="new-text" placeholder="New TODO"/>
+    	<p id="count"></p>
+
+	</div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/jquery.simpleWeather.js"></script>
+<script type="text/javascript" src="js/func.js"></script>
+<script type="text/javascript" src="js/todolist.js"></script>
+<!-- <script	type="text/javascript" src="js/simpleweather.jquery.json"></script> -->
+
+
+<script type="text/javascript">
+
+// Docs at http://simpleweatherjs.com
+
+/* Does your browser support geolocation? */
+if ("geolocation" in navigator) {
+	$('.js-geolocation').show(); 
+} else {
+	$('.js-geolocation').hide();
+}
+
+/* Where in the world are you? */
+
+
+$(".js-geolocation").on("click", function() {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+  });
+});
+
+
+$(".test").on("click", function(){
+	alert("The paragraph was clicked!");
+})
+
+
+// $('js-geolocation').click(function() {
+// 	navigator.geolocation.getCurrentPosition(function(position) {
+//     loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+//   });
+// });
+
+
+/* 
+* Test Locations
+* Austin lat/long: 30.2676,-97.74298
+* Austin WOEID: 2357536
+*/
+$(document).ready(function() {
+	
+	$(".todo").click(function(){
+	$(".todolist").toggle("fast");
+	});
+
+	$(".linksbtn").click(function(){
+  	$(".links").toggle("fast");
+  	});
+
+  	$(".footer_left").click(function(){
+  	$(".timelab").toggle("fast");
+  	});
+
+//  	jQuery.getJSON()
+  	
+	loadWeather(); //@params location, woeid
+	
+    $('#new-text').on('keypress',function(event)
+    	{
+    		if(event.keyCode == "13"&& $('#new-text').attr('value')!='')
+    			{
+    				addListItem();
+    			}
+    	});
+
+    $(document).on('click', '.delete', deleteItem);
+    count();
+    
+    function loadWeather() {
+        $.simpleWeather({
+        location: 'chengdu',
+        woeid: '',
+        unit: 'c',
+        success: function(weather) {
+        	html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+            html += '<ul><li>'+weather.city+'</li></ul>';
+
+            $("#weather").html(html);
+        },
+        error: function(error) {
+          	$("#weather").html('<p>'+error+'</p>');
+        }
+      	});
+    }
+
+});
+
+
+
+
+
+</script>
+
+</body>
+</html>

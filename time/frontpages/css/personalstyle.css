@@ -1,0 +1,164 @@
+
+h4, h5, h6,
+h1, h2, h3 {margin-top: 0;}
+ul, ol {margin: 0;}
+p {margin: 0;}
+html,body{
+	font-family: 'Lato', sans-serif;
+	background:#fff;
+}
+
+/*--- Header Part Starts Her ---*/
+.header{
+	background:url(../images/banner.jpg)no-repeat;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-ms-background-size:cover;
+	-o-background-size:cover;
+	min-height:350px;
+	position:relative;
+}
+.header-profile{
+	position:absolute;
+	bottom:-26%;
+	left: 42%;
+}
+.header-top{
+	text-align:center;
+	margin-top:8%;
+}
+.header-top h2{
+	font-size:35px;
+        font-weight:800;
+	color:#2b3b4b;
+        margin:10px 0 5px 0;	
+}
+
+/*--- Header Part Ends Here ---*/
+/*--- About Part Starts Here ---*/
+
+
+.about{
+	margin:4em 0;
+}
+.about-top{
+	
+}
+h3.top-title{
+	font-weight:800;
+	font-size:28px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+.about-top p.about-p{
+	font-weight:700;
+	font-size:18px;
+	color:#7f8a90;
+	margin:20px 0 20px 0;
+}
+.about-top p{
+	font-weight:400;
+	font-size:17px;
+	padding-left:15%;
+	color:#7f8a90
+}
+.about-row{
+	margin-top:15px;
+}
+.about-details{
+	padding: 0;
+	left:50%;
+	col-md-4;
+	about-row-column;
+	
+	
+}
+/* ul.about-details li{ */
+/* 	display: block; */
+/* 	margin:1.5em 0; */
+/* } */
+.about-details p{
+	display: block;
+	margin:1.5em 0;
+	font-weight:800;
+	font-size:20px;
+	color:#7f8a90;
+}
+.about-details p span{
+	font-weight:400;
+	color:#7f8a90;
+}
+
+.about-row-column h3{
+	font-size:22px;
+	color:#7f8a90;
+	font-weight:800;
+	margin-top:1em;
+        margin-left:22em;
+}
+ul.hoby{
+	padding:0;
+	margin-bottom:10px;
+        padding:10px;
+}
+ul.hoby li{
+	display: inline-block;
+	margin:1em 0.6em;
+}
+ul.hoby li i{
+	width:85px;
+	height:85px;
+	background:url(../images/img-sprite.png)no-repeat;
+	cursor:pointer;
+	display: block;
+}
+ul.hoby li i:hover{
+	opacity:0.5;
+}
+ul.hoby li i.tv{
+	background-position:0px 0px;
+}
+ul.hoby li i.car{
+	background-position:-99px 0px;
+}
+ul.hoby li i.music{
+	background-position:-197px 0px;
+}
+ul.hoby li i.shopping{
+	background-position:-296px 0px;
+}
+ul.hoby li i.reading{
+	background-position:-392px 0px;
+}
+ul.hoby li i.travel{
+	background-position:-491px 0px;
+}
+ul.hoby li i.tea{
+	background-position:-586px 0px;
+}
+/*--- About Part Ends Here ---*/
+/*--- Footer Starts Here ---*/
+.footer{
+	padding:2em 0;
+	text-align:center;
+	background:#2b3b4b;
+}
+p.copyright{
+	font-size:15px;
+	color:#fff;
+	font-weight:400;
+}
+p.copyright a{
+	color:#2980b9;
+	text-decoration:none;
+}
+p.copyright a:hover{
+	color:#fff;
+	-webkit-transition:0.5s all;
+	-o-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+/*--- Footer Ends Here ---*/

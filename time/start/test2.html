@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <style type="text/css">
+    .body{
+        background-color: 
+    }
+    </style>
+</head>
+<body>
+	
+    <h2>To Do List</h2>
+
+
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/todolist.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#new-text').on('keypress',function(event){if(event.keyCode == "13"){addListItem();}});
+    $(document).on('click', '.delete', deleteItem);
+    count();
+});
+
+</script>
+</body>
+</html>

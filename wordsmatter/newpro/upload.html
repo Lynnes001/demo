@@ -1,0 +1,88 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>上传照片01</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="stylesheet" type="text/css" href="style/reset.css" /> 
+<link rel="stylesheet" type="text/css" href="style/root.css" />   
+</head>
+
+<body onload="fill()">
+    <!-- start header -->
+<div id="header">
+         <a><img src="img/timelab.png"  alt="logo" height="82" class="logo" /></a>
+         <a class="button back"><img src="img/back-button.png" width="15" height="16" alt="icon" /></a>
+       	  <div class="clear"></div>
+        </div>
+    <!-- end header -->
+    <div class="page">
+        <div class="simplebox">
+                <div class="content">
+                  <form action="upload.php" method="post" enctype ="multipart/form-data">
+                
+                <br/>
+                <br/>
+                <hr/>
+                <br/>
+                <div class="form-line">
+                      <label class="st-label">你的用户ID是？</label>
+                      <input type="text" name="username" id="username"  style=" width:60%;" />
+                </div>
+                    <div class="form-line">
+                   	  <label class="st-label">图片选择</label>
+					  <input type="file" name="myfile" accept="image/jpeg,image/gif,image/png,image/jpg"/>
+ <!--                   <a href=""><img src="img/icons/photo-gallery.png" width="37" height="24" alt="icon" /></a> 
+                    <a href=""><img src="img/icons/personal-folder.png" width="37" height="24"  alt="icon"/></a>   -->
+                    </div>
+                    <div class="form-line">
+                   	  <label class="st-label">标签选择</label>
+                      <label><input type="checkbox" name="checkbox" id="checkbox1" value="tip1"/> tip1</label>
+                      <label><input type="checkbox" name="checkbox" id="checkbox2" value="tip2"/> tip2</label>
+                      <label><input type="checkbox" name="checkbox" id="checkbox3" value="tip3"/> tip3</label>
+                      <label><input type="checkbox" name="checkbox" id="checkbox3" value="tip4"/> tip4</label>
+                    </div>
+                      
+                <div class="form-line">
+                   	  <label class="st-label">自定义输入标签</label>
+                      <input type="text" name="tips" id="textfield1"  style=" width:80%;" />
+                </div>
+                 <div class="form-line">
+               	   <label class="st-label">输入详细描述（可选）</label>
+                      <textarea type="text" name="des" id="textfield12" style=" width:80%;" rows="3" cols="3"></textarea>
+                    </div>
+                    <!-- 自动输入经纬度信息 -->
+                    	<input type="hidden" name="lon" id="lon" value="">
+						          <input type="hidden" name="lat" id="lat" value="">
+					
+                 <div class="form-line">
+                   <input type="submit" id="button" value="&nbsp;提 交&nbsp;" class="submit-button" />
+                 </div>
+
+                  </form>
+                  
+                </div>
+</div>
+
+<script>
+	
+function fill(){
+  if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(inputPosition);
+    }
+  else{
+    alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+function inputPosition(position){
+    document.getElementById("lon").value = position.coords.longitude;
+    document.getElementById("lat").value = position.coords.latitude;
+  }
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body onload="fill()">
+           <form action="list.php" method="post" enctype ="multipart/form-data">
+           <!-- 自动输入经纬度信息 -->
+            <input type="hidden" name="lon" id="lon" value="">
+			<input type="hidden" name="lat" id="lat" value="">
+            <input type="submit" id="submit" value="&nbsp;提 交&nbsp;" class="submit-button" />
+			</form>
+
+<script>
+	
+function fill(){
+  if (navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(inputPosition);
+    }
+  else{
+    alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+function inputPosition(position){
+    document.getElementById("lon").value = position.coords.longitude;
+    document.getElementById("lat").value = position.coords.latitude;
+	document.getElementById("submit").click();  
+  }
+
+</script>
+
+</body>
+</html>
+

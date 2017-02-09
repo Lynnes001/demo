@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>时间记</title>
+
+<style type="text/css">
+    .result{position: fixed;top:0;left:0;background: rgba(0,0,0,0.5);z-index:1000;width:100%;height:100%;display: none;}    
+    .imgresult{border:5px solid #fff;}  
+    .indiv{position: absolute;}  
+</style>
+
+<link rel="stylesheet" href="css/mindex.css" />
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/lightbox.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+    <body style="background: lightgray;">
+
+    <div class="result" id="outdiv">  
+        <div class="indiv">  
+            <img class="imgresult" id="bigimg" src="">  
+        </div>    
+    </div>
+
+    <!-- 文本编辑器 -->
+    <div id="shadow" style="position: fixed;top:0;left:0;background: rgba(0,0,0,0.5);z-index:1000;width:100%;height:100%;display: none;">
+        <div style="margin: auto;  position: absolute;  top: 0; left: 0; bottom: 0; right: 0;width: 70%;height: 70%; background: #eeeeee; margin: auto;border-radius: 12px;">
+
+            <button style="background: 0;border: none;float: right;margin-top: 5px;" id="exitEdit"><img src="img/close.png" alt="" /></button>
+            
+            <div style="position: absolute;top: 12%;left: 5%;font-size: 24px;width: 55%;border: 2px solid black;">i'm tool bar
+
+
+
+            </div>
+
+            <textarea name="" id="" cols="60" rows="12" style="position: absolute;top: 20%;left: 5%;font-size: 24px;"></textarea>
+
+            <div style="position: absolute;background: 0; height: 56%;width: 25%;border: 3px dashed green;right: 5%;top: 12%;">upload pic area
+            <br />
+            <br />
+            <br />
+            <br />                  pic
+            <br />
+            <br />
+                <hr />
+            <br />
+            <br />
+            <br />                  pic
+            <br />
+            <br />
+            <br />
+                <hr />
+            <br />
+            <br />
+            <br />                  pic
+
+
+            </div>
+
+
+
+            <button id="save" style="background: #3399CC; height: 40px;width: 80px; border: none;position: absolute;bottom: 2%; right: 2%;border-radius: 14px;">保存</button>
+            
+
+        </div>
+
+    </div>
+
+        <div name="toolbar" class="rightbar" id="rightbar">
+
+<!--             <button class="btn" style="position: absolute;color: #ffffff; font-size: 60px; left: -25px; top:50%; margin :0;" >></button> -->
+            <div style="height: 120px; width: 100%;line-height: 120px;">
+                <img src="img/default.jpg" alt="headshow" style="height: 90px; width: 90px; border-radius: 50px;border-width: 4px;vertical-align: middle;margin-left: 6px;" />
+                <span style="color: #999933; font-size: 18px;line-height: 60px;">user_3306</span>
+            </div>
+            
+            <hr />
+
+            <p id="newNote">新文章</p>
+
+            <hr />
+            
+            <p>长博文</p>
+
+            <hr />
+
+            <p>发现</p>
+    
+            <hr />
+
+            <button id="slide_btn" style="display: block;text-align: center;margin: auto;background: 0;border-style: none;z-index: 100;">
+                <img id="slide_btn_img" src="img/arrow-up.png" alt="arrow-up" />
+            </button>
+
+
+            
+
+        </div>
+
+
+        <div class="mainbody">
+
+            <div class="note">
+                <div class="timeblock">
+                    <span id="time">2016年9月27日 16:27</span>
+                </div>
+                
+                <p id="tag" style="color: blue;">#社会新闻#</p>
+                <span style="font-size: 24px;">美国枪声四起，非裔成被警方枪杀主要目标.美国近来可谓枪案频发。在北卡罗来纳州夏洛特市又有非裔男子遭警察枪杀事件发生后，当地民众不顾宵禁连续五天举行了抗议示威活动，反对警察滥杀无辜。迫于公众压力，当地警方终于在近日公布了事发当时的执法视频。</span>
+
+                <div class="piclib">
+                    <img id="img1_1" src="img/3.jpg" alt="" />
+                    <img id="img1_2" src="img/4.jpg" alt="" />
+                    <img id="img1_3" src="img/3.jpg" alt="" />
+                    <img id="img1_4" src="img/3.jpg" alt="" />
+                    <img id="img1_5" src="img/3.jpg" alt="" />
+                </div>
+
+                
+                
+                <div class="editblock">
+                    <img src="img/mail.png" alt="locate" />
+                    <span style="margin: 10px 50px 0 50px;font-size: 16px;">山东省临沂市</span>
+                    <span style="margin: 10px 50px 0 50px;">编辑<img src="img/list.png" alt="" style="margin-left: 8px;" /></span>
+                    <span style="margin: 10px 50px 0 50px">删除<img src="img/bin.png" alt="" style="margin-left: 8px;" /></span>
+                </div>
+
+            </div>
+
+
+            <div class="note">
+                <div class="timeblock">
+                    <span id="time">2016年9月27日 16:27</span>
+                </div>
+                
+                <p id="tag" style="color: blue;">#社会新闻#</p>
+                <span style="font-size: 24px;">美国枪声四起，非裔成被警方枪杀主要目标.美国近来可谓枪案频发。在北卡罗来纳州夏洛特市又有非裔男子遭警察枪杀事件发生后，当地民众不顾宵禁连续五天举行了抗议示威活动，反对警察滥杀无辜。迫于公众压力，当地警方终于在近日公布了事发当时的执法视频。</span>
+
+                <div class="piclib">
+                    <img id="img2_1" src="img/3.jpg" alt="" />
+                    <img id="img2_2" src="img/3.jpg" alt="" />
+                    <img id="img2_3" src="img/3.jpg" alt="" />
+                    <img id="img2_4" src="img/3.jpg" alt="" />
+                    <img id="img2_5" src="img/3.jpg" alt="" />
+                </div>
+                
+                
+                <div class="editblock">
+                    <span style="margin: 10px 50px 0 50px">编辑</span>
+                    <span style="margin: 10px 50px 0 50px">删除</span>
+                </div>
+
+            </div>
+
+
+            <div class="note">
+                <div class="timeblock">
+                    <span id="time">2016年9月27日 16:27</span>
+                </div>
+                
+                <p id="tag" style="color: blue;">#社会新闻#</p>
+                <span style="font-size: 24px;">美国枪声四起，非裔成被警方枪杀主要目标.美国近来可谓枪案频发。在北卡罗来纳州夏洛特市又有非裔男子遭警察枪杀事件发生后，当地民众不顾宵禁连续五天举行了抗议示威活动，反对警察滥杀无辜。迫于公众压力，当地警方终于在近日公布了事发当时的执法视频。</span>
+
+                <div class="piclib">
+                    <img id="img3_1" src="img/3.jpg" alt="" />
+                    <img id="img3_2" src="img/3.jpg" alt="" />
+                    <img id="img3_3" src="img/3.jpg" alt="" />
+                    <img id="img3_4" src="img/3.jpg" alt="" />
+                    <img id="img3_5" src="img/3.jpg" alt="" />
+                </div>
+
+                
+                
+                <div class="editblock">
+                    <span style="margin: 10px 50px 0 50px">编辑</span>
+                    <span style="margin: 10px 50px 0 50px">删除</span>
+                </div>
+
+            </div>
+
+
+            <div class="note">
+                <div class="timeblock">
+                    <span id="time">2016年9月27日 16:27</span>
+                </div>
+                
+                <p id="tag" style="color: blue;">#社会新闻#</p>
+                <span style="font-size: 24px;">美国枪声四起，非裔成被警方枪杀主要目标.美国近来可谓枪案频发。在北卡罗来纳州夏洛特市又有非裔男子遭警察枪杀事件发生后，当地民众不顾宵禁连续五天举行了抗议示威活动，反对警察滥杀无辜。迫于公众压力，当地警方终于在近日公布了事发当时的执法视频。</span>
+
+                <div class="piclib">
+                    <img id="img4_1" src="img/3.jpg" alt="" />
+                    <img id="img4_2" src="img/3.jpg" alt="" />
+                    <img id="img4_3" src="img/3.jpg" alt="" />
+                    <img id="img4_4" src="img/3.jpg" alt="" />
+                    <img id="img4_5" src="img/3.jpg" alt="" />
+                </div>
+
+                
+                
+                <div class="editblock">
+                    <span style="margin: 10px 50px 0 50px">编辑</span>
+                    <span style="margin: 10px 50px 0 50px">删除</span>
+                </div>
+
+            </div>
+
+
+
+            <div class="note">
+                <div class="timeblock">
+                    <span id="time">2016年9月27日 16:27</span>
+                </div>
+                
+                <p id="tag" style="color: blue;">#社会新闻#</p>
+                <span style="font-size: 24px;">美国枪声四起，非裔成被警方枪杀主要目标.美国近来可谓枪案频发。在北卡罗来纳州夏洛特市又有非裔男子遭警察枪杀事件发生后，当地民众不顾宵禁连续五天举行了抗议示威活动，反对警察滥杀无辜。迫于公众压力，当地警方终于在近日公布了事发当时的执法视频。</span>
+
+                <div class="piclib">
+                    <img id="img5_1" src="img/3.jpg" alt="" />
+                    <img id="img5_2" src="img/3.jpg" alt="" />
+                    <img id="img5_3" src="img/3.jpg" alt="" />
+                    <img id="img5_4" src="img/3.jpg" alt="" />
+                    <img id="img5_5" src="img/3.jpg" alt="" />
+                </div>
+
+                
+                
+                <div class="editblock">
+                    <span style="margin: 10px 50px 0 50px">编辑</span>
+                    <span style="margin: 10px 50px 0 50px">删除</span>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </body>
+
+    <script>
+        $('#img1_1').click(function(){
+            var thiselement=$(this);showImg("#outdiv",".indiv","#bigimg",thiselement);});
+        $('#img1_2').click(function(){
+            var thiselement=$(this);showImg("#outdiv",".indiv","#bigimg",thiselement);});
+        $('#img1_3').click(function(){
+            var thiselement=$(this);showImg("#outdiv",".indiv","#bigimg",thiselement);});
+        $('#img1_4').click(function(){
+            var thiselement=$(this);showImg("#outdiv",".indiv","#bigimg",thiselement);});
+        $('#img1_5').click(function(){
+            var thiselement=$(this);showImg("#outdiv",".indiv","#bigimg",thiselement);});
+        $('#img2_1').click(function(){
+            var thiselement=$(this);showImg("#outdiv",".indiv","#bigimg",thiselement);});
+
+
+        $("#slide_btn").click(function(){
+            $("#rightbar").animate({height:"105px"},"slow");
+
+        });
+
+        $('#newNote').click(function(event) {
+            $('#shadow').fadeIn('fast');
+        });
+
+        $('#exitEdit').click(function(event) {
+            $('#shadow').fadeOut('fast');
+        });
+    </script>
+</html>

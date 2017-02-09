@@ -1,0 +1,196 @@
+@font-face {
+  font-family: '方正大魏简体';   /*字体名称*/
+  src: url('fonts/方正大魏简体.ttf');       /*字体源文件*/
+}
+
+
+body{
+	
+	background: #f1f1f1;
+	background: #d9d9d9;
+	background: #dddddd;
+	font-family: 方正大魏简体;
+}
+
+.middle{
+	position: absolute;
+	text-align: center;
+	width: inherit;
+	top: 10%;
+	font-size: 10px;
+	/*margin: 3px 3px 3px 3px;*/
+}
+
+.title{
+	border:2px soild white;
+	color:lightcyan;
+	text-align: center;
+	font-family: youyuan;
+	font-weight:900;
+	letter-spacing: 5px;
+
+	}
+
+.inputStyle{
+	/*padding: 5px 0 5px 0;*/
+	width: 80%;
+	height: 3%;
+	border-radius: 5px;
+	text-align: middle;
+	vertical-align: middle;
+}
+
+.intro{
+	font-size: 16px;
+	font-family: simhei;
+	text-align: center;
+	
+	width: inherit;
+	height: auto;
+	border-radius: 5px;
+	border-color: lightgray;
+	background: lightblue;
+}
+
+.intro p{
+	text-align: left;
+	padding: 10px 10px 0 10px;
+
+}
+
+.intro img{
+	padding:  0 0 8px 0;
+}
+
+
+.footer p{
+	font-size: 20px;
+	text-align: center;
+}
+
+.btn_div{
+	text-align: center; 
+}
+
+.btn{
+	font-size: 16px;
+	font-family: youyuan;
+	height: 25px;
+	width: 70%;
+	background: lightcyan;
+	border: 2px solid white;
+	border-radius: 2px;
+	margin: 6px;
+}
+
+.timepicker{
+	text-align: center;
+}
+
+
+.datepicker{
+	background: lightblue;
+	padding: 0 20px 0 20px;
+	text-align: center;
+}
+
+.date_btn{
+	/*background: lightblue;*/
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	border-radius:8px;
+
+}
+
+
+.timepker{
+	vertical-align: middle;
+	margin-top: 20px;
+
+}
+
+.time_pick{
+	border: 2px solid;
+	font-weight:bold;
+	border-color: white;
+	height: 25px;
+	width: 60px;
+	margin-bottom: 5px;
+	margin-right:3px;
+	border-style:outset;
+	text-align: center;
+	vertical-align:middle;
+	line-height: 25px;
+	overflow: hidden;
+	border-radius:8px;
+}
+
+.show{
+	font-size: 20px;
+	color: #ea5527;
+	text-align: center;
+	font-weight:900;
+}
+
+#date0{
+	pointer-events:none;
+}
+
+#hidden1_case1 {
+	display: none;
+	
+}
+
+#hidden1_case2{
+	display: none;
+}
+
+#hidden1_case3{
+	display: none;
+}
+
+#hidden1_case4{
+	display: none;
+}
+
+#hidden1_case5{
+	display: none;
+}
+
+#hidden1_case6{
+	display: none;
+}
+
+#hidden1_case7{
+	display: none;
+}
+
+#hidden2_case1 {
+	display: none;
+	
+}
+
+#hidden2_case2{
+	display: none;
+}
+
+#hidden2_case3{
+	display: none;
+}
+
+#hidden2_case4{
+	display: none;
+}
+
+#hidden2_case5{
+	display: none;
+}
+
+#hidden2_case6{
+	display: none;
+}
+
+#hidden2_case7{
+	display: none;
+}

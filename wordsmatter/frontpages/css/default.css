@@ -1,0 +1,113 @@
+
+
+
+
+
+
+body{
+	background: #FFF5EE;
+
+}
+table,td,th{
+	border:1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	scroll-behavior: auto;
+	overflow: hidden;
+
+}
+
+table{
+	position: relative;
+	table-layout: fixed;
+	font-size: 2.5em;
+	color: black;
+	width: 80%;
+	left: 10%;
+}
+
+td{
+	height: 2em
+
+}
+
+
+.closebtn{
+	margin-top: 0;
+	position: absolute;
+	right: 3%;
+}
+
+.fadeblock{
+
+	/*position: absolute;*/
+	position: fixed;
+	display: none;
+	left: 10%;
+	top:5%;
+	background: #5FF0FF;
+	/*background-image: url(../data/bg/7.JPG);*/
+	height: 90%;
+	width: 80%;
+	border-radius:20px;
+	border-color: white;
+	border : 2px solid black;
+	z-index: 3;
+}
+
+.fadetext{
+	display: inline-block;
+	padding: 0;
+	margin: 7% 7% 7% 7%;
+	/*height: 85%;*/
+	max-height: 85%;
+	width: 87%;
+	overflow: scroll;
+	/*overflow-y: hidden;*/
+	overflow-x: hidden;
+	font-family: Verdana;
+
+}
+
+
+.fadeblock h1{
+	
+}
+
+.bg{
+	position: absolute;
+	width: 200px;
+	display: none;
+	z-index: 2;
+	opacity: .8
+}
+
+.fadeblock p {
+	font-size: 2.4em;
+}
+
+.whitecover{
+	position: fixed;
+	display: none;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: gray;
+	opacity: .5;
+	z-index: 2;
+}
+
+.icon_play{
+	position: absolute;
+	padding-top: 0;
+	margin-top: 0;
+	left: 50%;
+	top: 10px;
+}
+
+
+
+
+
+
+

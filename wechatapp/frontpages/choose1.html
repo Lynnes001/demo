@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>照相馆预约系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width = device-width">
+<!-- 	<meta name="viewport" content="initial-scale = 0.5"> -->
+	<link rel="stylesheet" href="css/default.css">
+<!-- ===================================================== -->
+	<script type="text/javascript">
+	function op(val){
+		window.location.href="picktime.php?set="+val;
+	}
+
+	</script>
+<!-- ===================================================== -->
+</head>
+<body>
+
+<h1 class='title'>证件照</h1>
+
+<div class="intro">
+	<p>XXX工作室为您提供完美的证件照拍摄服务，还在为外面拍的证件照不好看而发愁吗？我们保证，您最完美的形象将由我们为您展现，为您在职场更进一步！</p>
+	<img width="90%" src="img/test.jpg">
+</div>
+
+<br/>
+<hr/>
+<br/>
+
+<div class="btn_div">
+
+	<button class="btn" name="basic" onclick="op('id_photo')">基础套餐</button><br/>
+	<button class="btn" name="secInch" onclick="op('id_sizes')">第二尺寸套餐</button><br/>
+	<button class="btn" name="secBg" onclick="op('id_bg')">第二背景套餐</button>
+
+</div>
+
+<div class = "footer">
+	<p>如有特殊需要，请致电13800000000</p>
+</div>
+
+</body>
+</html>
