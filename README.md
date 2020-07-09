@@ -1,10 +1,7 @@
-# wordsmatter.cn
+# wordsmatter.cn archive
 
 
-
-本仓库主要有三个项目<br>
-  1、 time 时间记，校级创新项目，目前有些内容可能挂掉了，需要维护。是我边学边做的首个项目。<br>
-  2、 wechatapp 一个用于筛选日期的手机页面。<br>
-  3、 wordsmatter 最近帮同学做的一个单词查询的手机网页，练习使用H5的新特性。<br>
+  1. (not working) time 时间记，校级创新项目，目前有些内容可能挂掉了，需要维护。是我边学边做的首个项目。<br>
+  2. (not working) wechatapp 一个用于筛选日期的手机页面。<br>
+  3. wordsmatter 最近帮同学做的一个单词查询的手机网页，练习使用H5的新特性。<br>
   <br>
-  目前只有第三个可以正常使用，其他两个均需要维护。以上内容的前后端均是个人完成。
